@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,
+        maximum-scale=1.0, user-scalable=no">
+
+  <title>Indian Open World 3D</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="loading">INDIAN OPEN WORLD<br>Loading 3D World...</div>
+
+  <div id="game">
+    <div id="topbar">
+      <span>INDIAN OPEN WORLD</span>
+      <span id="speed">0 km/h</span>
+    </div>
+
+    <div id="message">3D OPEN WORLD</div>
+
+    <div id="controls">
+      <div class="steering">
+        <button id="left">◀</button>
+        <button id="right">▶</button>
+      </div>
+
+      <div class="driving">
+        <button id="brake">BRAKE</button>
+        <button id="gas">GAS ▲</button>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </div>
+</body>
+</html>
