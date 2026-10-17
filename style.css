@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #111820;
+  font-family: Arial, sans-serif;
+  color: white;
+  touch-action: none;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #8bb8d5;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  touch-action: none;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #111820;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+#topbar {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+#speed {
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+#message {
+  position: absolute;
+  z-index: 4;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 12px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 11px;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+
+#controls {
+  position: absolute;
+  z-index: 10;
+  inset: auto 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 16px max(22px, env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.steering,
+.driving {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+button {
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  color: white;
+  background: rgba(15, 22, 30, 0.72);
+  font-size: 21px;
+  font-weight: bold;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  touch-action: none;
+  user-select: none;
+}
+
+button:active {
+  background: rgba(35, 130, 95, 0.95);
+  transform: scale(0.94);
+}
+
+#gas,
+#brake {
+  width: 68px;
+  height: 68px;
+  font-size: 12px;
+}
+
+#gas {
+  background: rgba(22, 115, 63, 0.85);
+}
+
+#brake {
+  background: rgba(150, 40, 35, 0.85);
+}
+
+@media (max-width: 380px) {
+  #controls {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .steering,
+  .driving {
+    gap: 7px;
+  }
+
+  button {
+    width: 54px;
+    height: 54px;
+  }
+
+  #gas,
+  #brake {
+    width: 58px;
+    height: 58px;
+  }
+}
