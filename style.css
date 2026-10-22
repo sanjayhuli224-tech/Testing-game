@@ -99,7 +99,8 @@ canvas {
 }
 
 .steering,
-.driving {
+.driving,
+.extras {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -118,6 +119,7 @@ button {
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
   touch-action: none;
   user-select: none;
+  pointer-events: auto;
 }
 
 button:active {
@@ -139,13 +141,20 @@ button:active {
   background: rgba(150, 40, 35, 0.85);
 }
 
+#exit {
+  width: 64px;
+  height: 64px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
 @media (max-width: 380px) {
   #controls {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .steering, .driving {
+  .steering, .driving, .extras {
     gap: 7px;
   }
 
@@ -157,5 +166,10 @@ button:active {
   #gas, #brake {
     width: 58px;
     height: 58px;
+  }
+
+  #exit {
+    width: 54px;
+    height: 54px;
   }
 }
