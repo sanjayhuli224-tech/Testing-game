@@ -5,8 +5,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -20,7 +19,7 @@ body {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  background: #8bb8d5;
+  background: linear-gradient(#a8d7ff 0%, #dfeef8 42%, #d9d2b4 100%);
 }
 
 canvas {
@@ -41,11 +40,12 @@ canvas {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #111820;
+  background: #121921;
   color: white;
   font-size: 22px;
   font-weight: bold;
-  line-height: 2;
+  line-height: 1.8;
+  letter-spacing: 2px;
 }
 
 #topbar {
@@ -57,30 +57,26 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    transparent
-  );
-  font-size: 13px;
+  padding: 16px 18px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
   pointer-events: none;
 }
 
 #speed {
-  padding: 9px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.45);
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 16px;
+  background: rgba(0,0,0,0.45);
+  font-size: 15px;
 }
 
 #message {
   position: absolute;
   z-index: 4;
-  top: 65px;
+  top: 68px;
   left: 50%;
   transform: translateX(-50%);
   padding: 7px 12px;
@@ -113,24 +109,23 @@ canvas {
 button {
   width: 62px;
   height: 62px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255,255,255,0.6);
   border-radius: 50%;
   color: white;
-  background: rgba(15, 22, 30, 0.72);
+  background: rgba(18,26,36,0.8);
   font-size: 21px;
   font-weight: bold;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
   touch-action: none;
   user-select: none;
 }
 
 button:active {
-  background: rgba(35, 130, 95, 0.95);
+  background: rgba(32, 130, 92, 0.9);
   transform: scale(0.94);
 }
 
-#gas,
-#brake {
+#gas, #brake {
   width: 68px;
   height: 68px;
   font-size: 12px;
@@ -150,8 +145,7 @@ button:active {
     padding-right: 10px;
   }
 
-  .steering,
-  .driving {
+  .steering, .driving {
     gap: 7px;
   }
 
@@ -160,8 +154,7 @@ button:active {
     height: 54px;
   }
 
-  #gas,
-  #brake {
+  #gas, #brake {
     width: 58px;
     height: 58px;
   }
